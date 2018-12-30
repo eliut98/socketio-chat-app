@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f5f9fd;
+    font-family: 'Lato', sans-serif;
+}
+
+.register-user {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    color: #578EC9;
+    text-align: center;
+    font-size: 1.5rem;
+    background: #253341;
+}
+
+.register-user h1 {
+    margin-bottom: 0;
+}
+
+.register-user #username {
+    border: none;
+    margin: 1rem;
+    color: #fff;
+    border-bottom: 2px solid #578EC9;
+    background-color: transparent;
+}
+
+.chat {
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+}
+
+.chat__label {
+    position: relative;
+    margin: 1rem;
+    padding: 1rem;
+    color: #000;
+    border-radius: 7px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+}
+
+.chat__label.other::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateX(-100%) translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 10px 5px 0;
+    border-color: transparent #ffff transparent transparent;
+}
+
+.chat__label.me {
+    color: #fff;
+    background-color: #578ec9;
+}
+
+.chat__label.me::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateX(100%) translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 10px;
+    border-color: transparent transparent transparent #578ec9;
+}
+
+.chat__username {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.chat .message__label {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #578ec9;
+}
+
+.chat .message__label #message {
+    display: block;
+    width: 80%;
+    padding: 0.5rem;
+}
+
+.chat .message__label #send {
+    display: block;
+    width: 10%;
+    border: none;
+    color: #578ec9;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}

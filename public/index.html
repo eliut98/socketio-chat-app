@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat Socket.io</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="register-user">
+        <h1>Welcome</h1>
+        <h2>What's your username?</h2>
+        <input type="text" id="username" autofocus>
+    </div>
+    <div class="chat">
+        <div class="chat__window">
+            <div class="chat__output"></div>
+            <div class="chat__actions"></div>
+        </div>
+        <div class="message__label">
+            <input type="text" name="" id="message" placeholder="Type here...">
+            <button id="send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+</body>
+
+</html>
